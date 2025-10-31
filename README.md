@@ -4,7 +4,7 @@ Typst template for thesis at Innopolis University.
 
 ## Getting Started
 
-> Check the example project in [template](./template) directory.
+> Check the example project in [example](./example) directory.
 
 1. Import this template from [lib.typ](./lib.typ) (if working offline) or from Typst Universe (coming soon).
 
