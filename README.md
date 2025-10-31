@@ -53,11 +53,16 @@ Typst template for thesis at Innopolis University.
     ```typst
     = Introduction <intro>
     #lorem(100)
+    
     == Section
+    ...
+    
     === Subsection
-    
+    ...
+
     = Methodology <method>
-    
+    ...
+
     = Implementation <impl>
     ...
     
@@ -73,8 +78,8 @@ Typst template for thesis at Innopolis University.
 
     ```typst
     #bibliography(
-    title: "Bibliography cited",
-    "refs.bib"
+        title: "Bibliography cited",
+        "refs.bib"
     )
     
     #show: appendix
@@ -93,7 +98,7 @@ Typst template for thesis at Innopolis University.
 1. Method for working with captions with different representations in outlines/page headers.
 
     ```typst
-    #flex-title([Real figure/table/section title],[Alternative title to appear in page headers and outlines])
+    #flex-title([Real figure/table/section title], [Alternative title to appear in page headers and outlines])
     ```
 
 1. Simple formatted blocks for some math-related elements.
