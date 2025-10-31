@@ -15,7 +15,7 @@
   supervisor-ru: "Иванов Иван Иванович",
   supervisor-en: "Ivanov Ivan Ivanovich",
   consultants: "Иванов Иван Иванович / Ivanov Ivan Ivanovich",
-  year: "2025"
+  year: "2025",
 )
 
 #show: thesis.with(
@@ -37,7 +37,7 @@ This is a section. This is a citation without brackets. and this is one with bra
 ==== Creating a subsubsection
 ==== Creating a subsubsection
 
-#par(first-line-indent: 0em)[*This is a heading level below subsubsection* #h(0.5em) And this is a quote:] 
+#par(first-line-indent: 0em)[*This is a heading level below subsubsection* #h(0.5em) And this is a quote:]
 
 #quote[#lorem(50)] \
 
@@ -60,7 +60,7 @@ This is a _fancy_ table:
       table.hline(stroke: none, start: 0, end: 3),
       [a4], [b4], [c4],
     ),
-    supplement: "TABLE"
+    supplement: "TABLE",
   )
 ]
 
@@ -74,10 +74,10 @@ This is a _fancy_ table:
 Typst supports non-italicized lower-case greek letters. See for yourself: $upright(beta), bold(upright(beta)), beta, bold(beta)$. Next is a numbered equation:
 
 $
-|bold(X)|_(2,1) = underbrace(sum_(j=1)^n f_j(bold(X)), "convex") = sum_(j=1)^n |X_(.,j)|_2
+  |bold(X)|_(2,1) = underbrace(sum_(j=1)^n f_j(bold(X)), "convex") = sum_(j=1)^n |X_(.,j)|_2
 $ <equation>
 
-The reference to equation #ref(<equation>, supplement: []) is clickable. 
+The reference to equation #ref(<equation>, supplement: []) is clickable.
 
 == Theorems, Corollaries, Lemmas, Proofs, Remarks, Definitions and Examples
 
@@ -131,7 +131,7 @@ The reference to equation #ref(<equation>, supplement: []) is clickable.
 
 #align(center)[
   #figure(
-    caption: [#flex-title([Simulation Parameters],[This is the title I want to appear in the list of tables])],
+    caption: [#flex-title([Simulation Parameters], [This is the title I want to appear in the list of tables])],
     table(
       columns: (1fr, 1fr),
       align: center,
@@ -152,7 +152,7 @@ The reference to equation #ref(<equation>, supplement: []) is clickable.
       [Common RSU cache capacities], [[5000, 1000, 1500, 2000, 2500] mb],
       [Common backhaul rates], [[75, 100, 150] mb/s],
     ),
-    supplement: "TABLE"
+    supplement: "TABLE",
   )
 ]
 
@@ -160,7 +160,6 @@ The reference to equation #ref(<equation>, supplement: []) is clickable.
   #figure(
     image("figs/images.png"),
     caption: [One kernel at $x_s$ (#emph[dotted kernel]) or two kernels at $x_i$ and $x_j$ (_left and right_) lead to the same summed estimate at $x_s$. This shows a figure consisting of different types of lines. Elements of the figure described in the caption should be set in italics, in parentheses, as shown in this sample caption.],
-    
   )
 ]
 
@@ -168,8 +167,8 @@ The reference to equation #ref(<equation>, supplement: []) is clickable.
 
 This description implies several essential properties of the task at hand:
 
-1. Watermark must contain all necessary information, but still, be placeable and recognizable even on smaller images. The produced watermark must be compact but have the possibility to store enough information. 
-2. To prevent easy tampering, the watermark must be invisible to the naked eye (and, preferably, to basic image parsing tools). If malefactor does not know about the existence of watermark, they might not even try to remove it and disable it. 
+1. Watermark must contain all necessary information, but still, be placeable and recognizable even on smaller images. The produced watermark must be compact but have the possibility to store enough information.
+2. To prevent easy tampering, the watermark must be invisible to the naked eye (and, preferably, to basic image parsing tools). If malefactor does not know about the existence of watermark, they might not even try to remove it and disable it.
 
 
 = Methodology <method>
@@ -179,7 +178,7 @@ Referencing other chapters #ref(<lr>, supplement: []), #ref(<method>, supplement
 
 #align(center)[
   #figure(
-    caption: [#flex-title([Simulation Parameters],[This is the title I want to appear in the list of tables])],
+    caption: [#flex-title([Simulation Parameters], [This is the title I want to appear in the list of tables])],
     table(
       columns: (1fr, 1fr),
       align: center,
@@ -200,7 +199,7 @@ Referencing other chapters #ref(<lr>, supplement: []), #ref(<method>, supplement
       [Common RSU cache capacities], [[5000, 1000, 1500, 2000, 2500] mb],
       [Common backhaul rates], [[75, 100, 150] mb/s],
     ),
-    supplement: "TABLE"
+    supplement: "TABLE",
   )
 ]
 
@@ -218,7 +217,7 @@ Referencing other chapters #ref(<lr>, supplement: []), #ref(<method>, supplement
 
 #bibliography(
   title: "Bibliography cited",
-  "refs.bib"
+  "refs.bib",
 )
 
 #show: appendix
