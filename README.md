@@ -6,7 +6,7 @@ Typst template for thesis at Innopolis University.
 
 > Check the example project in [example](./example) directory.
 
-1. Import this template from [lib.typ](./lib.typ) (if working offline) or from Typst Universe (coming soon).
+1. Import this template from [lib.typ](./lib.typ) (if working offline) or from [Typst Universe](https://typst.app/universe/package/modern-innopolis-thesis).
 
     ```typst
     #import "@preview/modern-innopolis-thesis:0.1.0": *
