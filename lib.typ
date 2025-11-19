@@ -1,6 +1,6 @@
-// ---------------------------------------------
+// ---------------------------------------------------------------
 // Typst Thesis Template - Innopolis University
-// ---------------------------------------------
+// ---------------------------------------------------------------
 
 // -----------------------<< title-page >>------------------------
 
@@ -219,7 +219,7 @@
 
   // ---------------------<< helper methods >>--------------------------
   let numbering-h(c) = {
-    return numbering(c.numbering, ..counter(heading).at(c.location()))
+    return numbering("1.1.1", ..counter(heading).at(c.location()))
   }
 
   let current-h() = {
@@ -280,29 +280,19 @@
   )
   pagebreak()
 
-  context {
-    let figures = query(figure.where(kind: image))
-    if figures.len() > 0 {
-      outline(
-        target: figure.where(kind: image),
-        indent: auto,
-        title: [\ \ #text(size: h1-size)[List of Figures] #linebreak() #linebreak()],
-      )
-      pagebreak()
-    }
-  }
+  outline(
+    target: figure.where(kind: image),
+    indent: auto,
+    title: [\ \ #text(size: h1-size)[List of Figures] #linebreak() #linebreak()],
+  )
+  pagebreak()
 
-  context {
-    let tables = query(figure.where(kind: table))
-    if tables.len() > 0 {
-      outline(
-        target: figure.where(kind: table),
-        indent: auto,
-        title: [\ \ #text(size: h1-size)[List of Tables] #linebreak() #linebreak()],
-      )
-      pagebreak()
-    }
-  }
+  outline(
+    target: figure.where(kind: table),
+    indent: auto,
+    title: [\ \ #text(size: h1-size)[List of Tables] #linebreak() #linebreak()],
+  )
+  pagebreak()
 
   // ----------------------<< abstract >>--------------------------------------
 
