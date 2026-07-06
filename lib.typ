@@ -343,7 +343,6 @@
     set text(size: h1-size, weight: "bold")
     counter(math.equation).update(0)
     counter(figure.where(kind: image)).update(0)
-    counter(figure.where(kind: table)).update(0)
 
     pagebreak(weak: true)
     if it.body == [Bibliography cited] {
@@ -405,6 +404,7 @@
   show figure.where(
     kind: table,
   ): set figure.caption(position: top, separator: linebreak())
+  show figure.where(kind: table): set figure(numbering: "I")
   show figure.where(kind: table): set block(breakable: true)
 
   show figure.where(
