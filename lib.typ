@@ -21,7 +21,7 @@
   consultants: "",
   year: "",
 ) = {
-  set page(paper: "a4", margin: (top: 2.5cm, bottom: 1cm))
+  set page(paper: "a4", margin: (left: 2.5cm, top: 2cm, right: 2cm, bottom: 2cm))
   set text(size: 14pt)
 
   align(center)[
@@ -31,31 +31,42 @@
 
     *ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА* \
     *(#work-ru)* \
-    по направлению подготовки \
-    *#program-code – «#program-ru»*
+    *по направлению подготовки* \
+    *#program-code #program-ru*
 
-    *GRADUATION THESIS* \
+    *FINAL QUALIFICATION WORK* \
     *(#work-en)* \
-    *Field of Study* \
-    *#program-code – “#program-en”*
+    *Academic Program* \
+
+    *#program-code #program-en*
 
     *Направленность (профиль) образовательной программы* \
     *«#specialty-ru»* \
-    *Area of Specialization / Academic Program Title:* \
-    *“#specialty-en”*
+    *Field of Study:* \
+    *«#specialty-en»*
 
     #grid(
       columns: (0.5fr, 5fr),
       column-gutter: 7pt,
-      [#box(inset: 4pt)[*Тема / Topic*]],
+      [#box(inset: 4pt)[*Тема*]],
       [#align(left)[#box(stroke: 0.5pt + black, fill: silver, width: 100%, inset: 6pt)[
-        *#topic-ru / #topic-en*
+        *#topic-ru*
+      ]]],
+    )
+
+    #grid(
+      columns: (0.5fr, 5fr),
+      column-gutter: 7pt,
+      [#box(inset: 4pt)[*Topic*]],
+      [#align(left)[#box(stroke: 0.5pt + black, fill: silver, width: 100%, inset: 6pt)[
+        *#topic-en*
       ]]],
     ) \
+
     #grid(
       columns: (1fr, 1.5fr, 1fr),
       column-gutter: (20pt, 1pt, 1pt),
-      [#box(inset: (left: 1pt, right: 1pt))[#align(left)[Работу выполнил / Thesis is executed by]]],
+      [#box(inset: (left: 1pt, right: 1pt))[#align(left)[Работу выполнил / _Prepared by_]]],
       [
         #align(left)[
           #box(stroke: 0.5pt + black, fill: silver, width: 100%, height: 30mm, inset: 6pt)[
@@ -72,7 +83,7 @@
       column-gutter: (20pt, 1pt, 1pt),
       [#box(inset: (left: 1pt, right: 1pt))[#align(
         left,
-      )[Руководитель выпускной квалификационной работы / Graduation Thesis Supervisor]]],
+      )[Руководитель выпускной квалификационной работы / _Final Qualification Work Supervisor_]]],
       [
         #align(left)[
           #box(stroke: 0.5pt + black, fill: silver, width: 100%, height: 35mm, inset: 6pt)[
@@ -295,8 +306,10 @@
   pagebreak()
 
   // ----------------------<< abstract >>--------------------------------------
+  [#set par(justify: true)]
+  align(center, text(font-size)[\ \ *Abstract* \ \ ])
+  [#abstract]
 
-  align(center, text(font-size)[\ \ *Abstract* \ \ #abstract])
   pagebreak()
 
   // -------------------<< page headers >>-------------------------------------
